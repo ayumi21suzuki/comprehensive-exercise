@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>送信完了画面</title>
+
+</head>
+<body>
+	<form method="post" th:action="@{/regist/registerConfirm}">
+	
+	<p>入力されたメールアドレス宛にユーザー登録用のURLが記載された<br>
+	メールしました。 <br>
+	メールに記載されたURLをクリックして、ユーザー登録をしてください<br></p>
+
+	<p>なお送信されたURLの有効期限は現在から24時間以内となります<br>
+	24時間を過ぎてしまった場合は、再度登録用URLリクエスト画面から<br>
+	やり直してください。 <br></p>
+	
+	<p>正しいメールアドレスを入力しているにもかかわらず<br>
+	メールが届かない場合は、お問い合わせページから問い合わせください<br></p>
+</form> 
+</body>
+</html>

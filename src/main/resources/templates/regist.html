@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>登録用URLリクエスト画面</title>
+
+</head>
+<body>
+<form action="send_complete.html" th:object="${registForm}" method="post" 
+th:action="@{/regist/registerConfirm}">
+
+<h1>登録用URLリクエスト画面</h1><br>
+
+<div th:errors="*{user_email}" style="color: red">エラー!</div>
+	メールアドレス:　<input type="text" name="user_email"><br>
+	
+	<button type="submit">登録</button>
+</form>
+</body>
+</html>
