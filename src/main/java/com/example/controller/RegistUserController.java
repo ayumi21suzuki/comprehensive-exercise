@@ -109,7 +109,7 @@ public class RegistUserController {
 
 	@RequestMapping("/UserComplete")
 	public String UserComplete(@Validated UserForm form, BindingResult result) {
-		String key = (String) session.getAttribute("Key");
+		String key = (String) session.getAttribute("key");
 
 		List<Regist> registList = registService.findByEmail3(key);
 

@@ -35,7 +35,7 @@ public class RegistRepository {
 		String sql = "SELECT * FROM regist_url WHERE user_email=:user_email";
 		SqlParameterSource param = new MapSqlParameterSource().addValue("user_email", user_email);
 		List<Regist> registList = template.query(sql, param, REGIST_ROW_MAPPER);
-	
+
 			if (registList.size() == 0) {
 					return null;
 				}
@@ -45,7 +45,7 @@ public class RegistRepository {
 		String sql = "SELECT * FROM users WHERE user_email=:user_email";
 		SqlParameterSource param = new MapSqlParameterSource().addValue("user_email", user_email);
 		List<Regist> registList = template.query(sql, param, REGIST_ROW_MAPPER);
-	
+
 			if (registList.size() == 0) {
 					return null;
 				}
@@ -86,7 +86,7 @@ public class RegistRepository {
 		String updateSql = "UPDATE regist_url SET del_flg=1 WHERE unique_url=:unique_url";
 		SqlParameterSource param= new MapSqlParameterSource().addValue("unique_url",key);
 		template.update(updateSql, param);
-	
+
 	}
 
 }

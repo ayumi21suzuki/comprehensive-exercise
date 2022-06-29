@@ -46,4 +46,5 @@ public class RegistService {
 		registRepository.update(key);
 
 	}
-}
+	
+} 
