@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ユーザー登録画面</title>
+
+</head>
+<body>
+	<form action="registation_complete.html" th:object="${userForm}" method="post"
+		th:action="@{/regist/UserComplete}">
+		<h1>ユーザー登録画面</h1><br>
+		
+		<div th:errors="*{name}" style="color: red">エラー!</div>
+		<p>名前：       <input type="text" name="name"><br></p>
+		
+		<div th:errors="*{ruby}" style="color: red">エラー!</div>
+		<p>ふりがな：    <input type="text" name="ruby"><br></p>
+		
+		<div th:errors="*{zipcode}" style="color: red">エラー!</div>
+		<p>郵便番号：    <input type="text" name="zipcode"><br></p>
+		
+		<div th:errors="*{address}" style="color: red">エラー!</div>
+		<p>住所：        <input type="text" name="address"><br></p>
+		
+		<div th:errors="*{telephone}" style="color: red">エラー!</div>
+		<p>電話番号：     <input type="text" name="telephone"><br></p>
+		
+		<div th:errors="*{password}" style="color: red">エラー!</div>
+		<p>パスワード：    <input type="password" name="password"><br></p>
+		
+		<div th:errors="*{confirmpassword}" style="color: red">エラー!</div>
+		<p>確認パスワード： <input type="password" name="confirmpassword"><br></p>
+
+		<button type="submit">登録</button>
+	</form>
+</body>
+</html>
