@@ -98,7 +98,7 @@ public class RegistUserController {
 
 	@RequestMapping("/User")
 	public String index3(String key) {
-		session.setAttribute("Key", key);
+		session.setAttribute("key", key);
 		return "user";
 	}
 
